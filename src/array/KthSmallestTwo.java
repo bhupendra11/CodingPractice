@@ -1,3 +1,4 @@
+package array;
 public class KthSmallestTwo	 {
     public static void swap(int[] a, int i, int j) {
         int temp = a[i];
