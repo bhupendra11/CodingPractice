@@ -8,7 +8,22 @@ public class LongestCommonSubsequence {
         String str2 = "AEDPHR";
         
         int result = lcs.lcsBottomUp(str1, str2);
-        System.out.print(result);
+        System.out.println("Bottom up result =  "+ result);
+        
+        //topDown
+        int n = str1.length();
+        int m = str2.length();
+        int arr[][] = new int[n+1][m+1];
+        
+        for(int i=0; i<=n; i++){
+          for(int j=0; j<=m ;j++){
+            arr[i][j]=-1;
+          }
+        }
+        
+        result= lcsTopDown(str1, str2, n,m, arr);
+        System.out.print("Top Down result =  "+ result);
+        
     }
 
 	 public static int lcsRecursive(String s1, String s2){
@@ -51,10 +66,33 @@ public class LongestCommonSubsequence {
 	     
 	   }
 	
+	public static int lcsTopDown(String s1, String s2, int n , int m, int arr[][] ){
+	     
+	     
+	     
+	     if(arr[n][m]!=-1)return arr[n][m];
+	     
+	    // System.out.println("n= "+n+" m = "+m);
+	    int result =0; 
+	     if(n==0 || m==0)return 0;
+	     
+	     else if (s1.charAt(n-1)==s2.charAt(m-1)){
+	      // System.out.println("Here");
+	       result = 1+lcsTopDown(s1, s2, n-1, m-1, arr);
+	     }
+	     else{
+	       int op1 = lcsTopDown(s1, s2, n-1, m, arr);
+	       int op2 = lcsTopDown(s1, s2, n, m-1, arr);
+	       result = Math.max(op1, op2);
+	     } 
+	     arr[n][m] =result;
+	     return result;
+	   }
+
 	
 	
 		//NOT WORKING
-		 /*public static int lcsTopDown(String s1, String s2, int i, int j , int arr[][]){
+		 /*public static int lcsTopDown2(String s1, String s2, int i, int j , int arr[][]){
 	      if(s1.length()==0 || s2.length()==0
 	        || i >= s1.length() || j >=s2.length()
 	        )return 0;
