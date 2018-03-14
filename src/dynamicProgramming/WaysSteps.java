@@ -4,8 +4,8 @@ public class WaysSteps {
 
 	public static void main(String args[]) {
 
-		int n = 5;
-		int k = 4;
+		int n = 4;
+		int k = 3;
 		int dp[] = new int[n + 1];
 		for (int i = 0; i <= n; i++) {
 			dp[i] = -1;
