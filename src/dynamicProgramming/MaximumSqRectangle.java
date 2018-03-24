@@ -45,21 +45,28 @@ public class MaximumSqRectangle {
 			}
 			System.out.println();
 		}*/
+		int max =0;
 				
 		int[][] dp = new int[n][m];
 		
 		//copy first row
 		for(int i=0; i<m ;i++ ) {
 			dp[0][i] = arr[0][i];
+			if(max < dp[0][i]) {
+				max = dp[0][i];
+			}
 		}
 		
 		//copy first column
 		for(int i=0; i<n ;i++ ) {
 			dp[i][0] = arr[i][0];
+			if(max < dp[i][0]) {
+				max = dp[i][0];
+			}
 		}
 		
 		//fill rest of the matrix
-		int max =0;
+		
 		
 		for(int i=1 ;i<n ;i++) {
 			for(int j=1; j<m ;j++) {
@@ -67,19 +74,21 @@ public class MaximumSqRectangle {
 				if(arr[i][j]==1) {					
 					dp[i][j] = Math.min(Math.min(dp[i-1][j], dp[i][j-1]), dp[i-1][j-1]) +1;		
 					
-					if(max < dp[i][j]) {
-						max = dp[i][j];
-					}
+					
 				}
 				else {
 					dp[i][j] =0;
 				}
+				
+				if(max < dp[i][j]) {
+					max = dp[i][j];
+				}
 			}
 		}
 		
-		//System.out.println("dp arr");
+		/*System.out.println("dp arr");
 		
-		/*for(int j=0; j<n ;j++) {
+		for(int j=0; j<n ;j++) {
 			for(int k=0; k<m ;k++) {
 				System.out.print(dp[j][k]+" ");
 			}
