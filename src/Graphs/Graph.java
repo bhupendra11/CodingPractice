@@ -6,7 +6,7 @@ import java.util.Queue;
 
 public class Graph {
 
-	private int v;
+	public int v;
 	private ArrayList<Integer> listArray[];
 	boolean isBiDirectional =false;
 	
@@ -20,8 +20,7 @@ public class Graph {
 	}
 	
 	public void addEdge(int u, int v ) {
-		listArray[u].add(v);
-		
+		listArray[u].add(v);		
 		if(isBiDirectional) {
 			listArray[v].add(u);
 		}
@@ -40,10 +39,12 @@ public class Graph {
 		}
 	}
 	
-	
+	public ArrayList<Integer> adj(int v){
+		return this.listArray[v];
+	}
 	
 	/**
-	 *    0-------1
+	 *    0--------s1
 	 *    |      /   \
 	 *    |    /        \
 	 *    |  /            \
