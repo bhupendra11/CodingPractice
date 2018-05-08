@@ -54,7 +54,7 @@ public class Graph2 {
 		q.add(start);
 		visited[start] = true;
 		dist[start]=0;
-		parent[0]=-1;
+		parent[start]=-1;
 		
 		while(!q.isEmpty()) {
 			int node = q.poll();
@@ -102,7 +102,7 @@ public class Graph2 {
 	 * @param args
 	 */
 	public static void main(String args[]) {
-		Graph2 g = new Graph2(true);
+		Graph2 g = new Graph2(false);
 		
 		g.addEdge(0, 1);
 		g.addEdge(0, 4);
@@ -114,7 +114,7 @@ public class Graph2 {
 		g.addEdge(3, 5);
 		
 		//g.printGraph();
-		g.bfs(0,5);
+		g.bfs(2,5);
 		
 		System.out.println();
 		
