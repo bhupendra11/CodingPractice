@@ -22,23 +22,13 @@ public class SortedListToBST{
         
         if(head==null)return null;
         ListNode cur = head;
-       /* ListNode prev = util(head);
-        
-        ListNode mid =null;
-        
-        if(prev!= null){
-            mid = prev.next;
-            prev.next=null;
-        }*/
         
         if(head.next==null) {
         	TreeNode node = new TreeNode(head.val);
         	return node;
         }
         
-        ListNode mid = util(head);
-        
-        
+        ListNode mid = util(head);        
         
         if(mid==null)return null;
         
@@ -53,20 +43,6 @@ public class SortedListToBST{
         
     }
     
-    /*private static ListNode util(ListNode node){
-        
-        if(node == null)return null;
-        ListNode prev = null;
-        ListNode firstPtr = node;
-        ListNode secPtr = node;
-        
-        while(secPtr.next!= null && secPtr.next.next!= null){
-            prev = firstPtr;
-            firstPtr = firstPtr.next;
-            secPtr = secPtr.next.next;
-        }
-        return prev;
-    }*/
     
 	private static ListNode util(ListNode node){
 	        
