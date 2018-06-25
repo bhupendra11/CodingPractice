@@ -18,7 +18,7 @@ public class Histogram {
 		int area = 0;
 		Stack<Integer> stack = new Stack<>();
 		int i=0;
-		for ( i = 0; i < arr.length;) {
+		while ( i < arr.length) {
 
 			if (!stack.isEmpty() && arr[stack.peek()] > arr[i]) {
 				int top = stack.pop();
