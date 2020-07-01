@@ -20,12 +20,7 @@ public class BlackShapes {
 			arr[i] = sc.next();
 		}
 		sc.close();
-		/*for(String s: arr) {
-			System.out.println(s);
-		}*/
-		int res =black(arr);
-		
-		
+        int res =black(arr);
 		System.out.println(res);
 		
 	}
