@@ -122,7 +122,6 @@ public class IsBipartite {
                     else if ((currColor == 0 && colorA.contains(nbr)) || (currColor == 1 && colorB.contains(nbr))) {
                         return 0;
                     }
-
                 }
 
             }
