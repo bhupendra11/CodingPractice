@@ -5,7 +5,7 @@ package com.codingpractice.binarysearch;
  *
  * https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/submissions/
  */
-public class FirstAndLastOccurenceOfAnElement {
+public class III_FirstAndLastOccurenceOfAnElement {
 
     public static void main(String[] args) {
 

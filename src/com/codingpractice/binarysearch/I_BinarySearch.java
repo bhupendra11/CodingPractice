@@ -4,7 +4,7 @@ package com.codingpractice.binarysearch;
  * Tutorial : https://www.youtube.com/watch?v=QNGL_t_o_QA&list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2&index=2
  */
 
-public class BinarySearch {
+public class I_BinarySearch {
     public static void main(String[] args) {
 
         int arr[] = {1,2,9,11,34,89};

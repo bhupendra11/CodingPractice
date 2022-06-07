@@ -3,7 +3,7 @@ package com.codingpractice.binarysearch;
 /**
  * https://www.youtube.com/watch?v=Ru_HhBFV3Xo&list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2&index=6
  */
-public class CountElementInSortedArray {
+public class II_CountElementInSortedArray {
 
     public static void main(String[] args) {
 
