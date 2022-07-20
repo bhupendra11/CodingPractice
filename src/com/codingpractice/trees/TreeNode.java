@@ -5,9 +5,9 @@ public class TreeNode {
 	TreeNode left;
 	TreeNode right;
 
-	TreeNode(int x) {
-		val = x;
-		left = null;
-		right = null;
+	TreeNode(int val) {
+		this.val = val;
+		this.left = null;
+		this.right = null;
 	}
 }
