@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class AllUniquePermutations {
+public class    AllUniquePermutations {
 	
 	public static void main(String args[]) {
 		AllUniquePermutations perms = new AllUniquePermutations();
