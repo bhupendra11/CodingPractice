@@ -1,7 +1,5 @@
 package com.codingpractice.binarysearch;
 
-import sun.jvm.hotspot.tools.SysPropsDumper;
-
 public class XII_PeakElement {
 
     public static void main(String[] args) {
