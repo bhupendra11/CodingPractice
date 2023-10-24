@@ -1,9 +1,6 @@
 package com.prep2023.heaps;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
+import java.util.*;
 
 /**
  * Author: Bhupendra Shekhawat
@@ -41,40 +38,59 @@ import java.util.PriorityQueue;
  */
 
 class TopKFrequentElements {
-    public int[] topKFrequent(int[] nums, int k) {
-        Map<Integer,Integer> map = new HashMap<>();
-        for(int i: nums){
-            map.put(i, map.getOrDefault(i,0)+1);
+
+    //Approach 1
+    // O(N) using bucket sort
+    public int[] topKFrequentKLinear(int[] nums, int k){
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int num: nums){
+            map.put(num, map.getOrDefault(num,0)+1);
+        }
+        int n = nums.length;
+        List<Integer>[] buckets = new List[n+1];
+        for(int i=0;i<= n;i++){
+            buckets[i] = new ArrayList<>();
+        }
+        for(int key : map.keySet()){
+            buckets[map.get(key)].add(key);
         }
 
-        //create a minHeap
-        PriorityQueue<Node> heap = new PriorityQueue<Node>((x, y) -> x.count - y.count);
-
-        //O(nlogk)
-        for(int i : map.keySet()){
-            heap.add(new Node(i, map.get(i)));
-            if(heap.size() > k){
-                heap.remove();
+        int res[] = new int[k];
+        List<Integer> flattened = new ArrayList<>();
+        for(int i=buckets.length-1 ;i >=0 ;i--){
+            for(int key : buckets[i]){
+                flattened.add(key);
             }
         }
 
-        //heap size is k
-        int[] result = new int[k];
-
-        for(int i=k-1 ;i>=0 ;i--){
-            result[i] = heap.remove().num;
+        for(int i=0;i<k;i++){
+            res[i] = flattened.get(i);
         }
-        return result;
+        return res;
     }
 
-    class Node{
-        int num;
-        int count;
-
-        Node(int num, int count){
-            this.num = num;
-            this.count =count;
+    //Approach 1
+    // Gives O(nlogk) using heaps
+    public int[] topKFrequent(int[] nums, int k) {
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int num: nums){
+            map.put(num, map.getOrDefault(num,0)+1);
         }
+
+        PriorityQueue<Integer> pq = new PriorityQueue<>((x,y)-> map.get(x) -map.get(y));
+        for(int key: map.keySet()){
+            pq.add(key);
+            if(pq.size() > k){
+                pq.remove();
+            }
+        }
+        int[] res = new int[k];
+        int i=0;
+        while(!pq.isEmpty()){
+            res[i] = pq.remove();
+            i++;
+        }
+        return res;
     }
 
     public static void main(String[] args) {
@@ -85,7 +101,9 @@ class TopKFrequentElements {
         int k = 2;
 
         // Call the topKFrequent method
-        int[] result = solution.topKFrequent(nums, k);
+        //int[] result = solution.topKFrequent(nums, k);
+
+        int[] result = solution.topKFrequentKLinear(nums, k);
 
         // Print the result
         System.out.println("Top " + k + " Frequent Elements: " + Arrays.toString(result));
