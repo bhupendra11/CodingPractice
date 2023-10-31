@@ -2,6 +2,7 @@ package com.prep2023.trees.segmenttree;
 
 public class SegmentTree {
 
+    // segment tree data structure
     static int segTree[];
     public static void main(String[] args) {
         int arr[] = new int[]{1,3,2,-2,4,5};
@@ -9,7 +10,7 @@ public class SegmentTree {
 
         //segment tree will have max of 4n letters
         segTree = new int[4*n+1];
-        //creating a 1 based index seg tree
+        //creating a 1 based index seg treemn M
         int stIndex = 1;   //segmentTreeIndex
 
         int start =0;
