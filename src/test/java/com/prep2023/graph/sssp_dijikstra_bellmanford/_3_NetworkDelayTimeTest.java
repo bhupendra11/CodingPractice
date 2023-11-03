@@ -1,4 +1,4 @@
-package com.prep2023.graph.dijikstra_bellmanford;
+package com.prep2023.graph.sssp_dijikstra_bellmanford;
 
 import org.junit.Test;
 
