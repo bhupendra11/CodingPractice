@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class _1_ReverseLinkedListTest {
+public class _1_ReverseLinkedListTest {
 
     _1_ReverseLinkedList reverseLinkedList = new _1_ReverseLinkedList();
     @Test

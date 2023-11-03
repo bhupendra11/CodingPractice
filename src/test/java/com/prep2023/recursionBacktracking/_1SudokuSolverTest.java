@@ -7,7 +7,7 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class _1SudokuSolverTest {
+public class _1SudokuSolverTest {
     @Test
     public void testSolveSudoku1() {
         char[][] board = {
