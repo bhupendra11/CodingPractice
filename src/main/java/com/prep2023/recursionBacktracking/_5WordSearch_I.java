@@ -68,11 +68,11 @@ public class _5WordSearch_I {
 }
 
 
-//Solution 1
+//MinCostUsingKruskals 1
 // Passes LC test cases but only beats 5% , not good
 // Also takes good storage space and only beats 5% in space also
 /*
-class Solution {
+class MinCostUsingKruskals {
     int m ;
     int n;
     int dx[] = {-1,1,0,0};
