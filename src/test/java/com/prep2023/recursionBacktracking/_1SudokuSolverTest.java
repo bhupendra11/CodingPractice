@@ -1,12 +1,9 @@
 package com.prep2023.recursionBacktracking;
 
-import org.testng.annotations.Test;
-
 import java.util.HashSet;
 import java.util.Set;
-
-import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 public class _1SudokuSolverTest {
     @Test
     public void testSolveSudoku1() {
