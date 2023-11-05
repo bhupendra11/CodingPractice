@@ -34,7 +34,6 @@ public class _5_InsertionSort {
                     j--;
                 }
                 else break;
-
             }
         }
     }
