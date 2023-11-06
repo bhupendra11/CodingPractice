@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 public class _7_RadixSort {
     public static void radixSort(int arr[]){
-        int n = arr.length;
         int maxVal = Integer.MIN_VALUE;
 
         for(int i : arr){
@@ -14,8 +13,7 @@ public class _7_RadixSort {
         int exp =1;
         while(exp <= maxVal ){
             countingSort(arr, exp);
-            exp*=10;
-
+            exp *= 10;
         }
     }
 
@@ -25,10 +23,9 @@ public class _7_RadixSort {
         int range = 10;
         int cf[] = new int[range];
 
-
         //calculate freq
         for(int i=0;i<n;i++){
-            cf[arr[i]/exp%10]++;
+            cf[arr[i] / exp % 10]++;
         }
 
         //calculate cumulative freq
