@@ -1,5 +1,6 @@
 package com.prep2023.arrays.searching.binarySearchI;
 
+import com.prep2023.arrays.searching.binarySearch_I._3_SearchInRotatedSortedArray;
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 

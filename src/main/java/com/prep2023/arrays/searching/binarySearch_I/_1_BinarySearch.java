@@ -1,4 +1,4 @@
-package com.prep2023.arrays.searching.binarySearchI;
+package com.prep2023.arrays.searching.binarySearch_I;
 
 public class _1_BinarySearch {
     public int search(int[] nums, int target) {

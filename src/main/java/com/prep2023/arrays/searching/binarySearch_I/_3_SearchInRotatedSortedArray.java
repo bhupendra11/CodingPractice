@@ -1,4 +1,4 @@
-package com.prep2023.arrays.searching.binarySearchI;
+package com.prep2023.arrays.searching.binarySearch_I;
 
 /**
  * Author: Bhupendra Shekhawat
@@ -8,6 +8,9 @@ package com.prep2023.arrays.searching.binarySearchI;
  * YouTube : <a href="">Link to YouTube</a>
  * Solution : https://leetcode.com/problems/search-in-rotated-sorted-array/solutions/4260547/single-binary-search
  * -without-finding-pivot-earlier/
+ *
+ * Intuition:
+s
  */
 public class _3_SearchInRotatedSortedArray {
         public int search(int[] nums, int target) {
