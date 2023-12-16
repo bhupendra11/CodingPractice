@@ -10,7 +10,7 @@ import java.util.*;
  * YouTube Link: 
  * Problem: 347. Top K Frequent Elements
  *
- Solution given here is O(nlogk) ass expected in follow up
+ MaximumScoreAfterOperations given here is O(nlogk) ass expected in follow up
 
  Medium
 
