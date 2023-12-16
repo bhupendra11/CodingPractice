@@ -34,8 +34,8 @@ public class RangeSumMutable {
         }
 
         int mid = start + (end-start)/2;
-        buildSegTree(2*stIndex, start, mid);
-        buildSegTree(2*stIndex+1, mid+1, end);
+        buildSegTree(2 * stIndex, start, mid);
+        buildSegTree(2 * stIndex + 1, mid + 1, end);
 
         segTree[stIndex] = segTree[2*stIndex]+ segTree[2*stIndex+1];
     }
@@ -52,8 +52,8 @@ public class RangeSumMutable {
         }
 
         int mid = start + (end - start)/2;
-        updateNode(index, newValue, start, mid, 2*stIndex);
-        updateNode(index, newValue, mid+1, end, 2*stIndex+1);
+        updateNode(index, newValue, start, mid, 2 * stIndex);
+        updateNode(index, newValue, mid+1, end, 2 * stIndex + 1);
 
         segTree[stIndex] = segTree[2*stIndex] + segTree[2*stIndex+1];
     }
