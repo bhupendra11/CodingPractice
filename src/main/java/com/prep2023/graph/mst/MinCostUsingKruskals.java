@@ -5,9 +5,8 @@ import java.util.Arrays;
 public class MinCostUsingKruskals {
     public int minimumCost(int n, int[][] connections) {
         // Lets use Kruskal's MST algorithm to do this
-
-        // In the algo, we keep finding the smallest weight edge and try creating the graph, if we find a redundant edge, which will cause cycle, we ignore it
-
+        // In the algo, we keep finding the smallest weight edge and try creating the graph,
+        // if we find a redundant edge, which will cause cycle, we ignore it
         // We can use DSUF to find redundant edge
         UnionFind uf = new UnionFind(n+1);
 
@@ -27,7 +26,6 @@ public class MinCostUsingKruskals {
                 usedEdges++;
             }
         }
-
         //If  the MST is formed with minimumn edges, total min edges to connect n nodes will be n-1
 
         if(usedEdges != n-1) return -1;
