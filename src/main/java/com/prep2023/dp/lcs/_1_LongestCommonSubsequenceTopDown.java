@@ -1,4 +1,4 @@
-package com.prep2023.dynamicProgramming.lcs;
+package com.prep2023.dp.lcs;
 
 import java.util.Arrays;
 
