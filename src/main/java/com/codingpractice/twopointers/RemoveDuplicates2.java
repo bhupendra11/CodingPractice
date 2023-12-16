@@ -9,7 +9,7 @@ public class RemoveDuplicates2 {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1, 200, 200, 200, 3,4,4);
         int result = removeDuplicates(list);
-        System.out.println("Solution="+result );
+        System.out.println("MaximumScoreAfterOperations="+result );
     }
 
     public static int removeDuplicates(List<Integer> a) {
