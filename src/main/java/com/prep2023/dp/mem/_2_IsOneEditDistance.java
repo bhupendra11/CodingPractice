@@ -1,4 +1,4 @@
-package com.prep2023.dp.mem_mcm;
+package com.prep2023.dp.mem;
 
 public class _2_IsOneEditDistance {
     //

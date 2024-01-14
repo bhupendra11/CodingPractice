@@ -11,5 +11,6 @@ public class _8_LongestRepeatingSubsequence {
     public int LongestRepeatingSubsequence(String str)
     {
         // code here
+        return 0;
     }
 }

@@ -14,7 +14,9 @@ public class _6_RangeAddition {
      Option 1: just do a linear iteration for each query and do uopdate for the segment
      Worst case time O(updates*N) -> n is length
 
-     But the thing to note here is , when a range is updated their is no relative change between the elements of the range, as all the elements of the range are updated by the same factor
+     But the thing to note here is , when a range is updated
+     their is no relative change between the elements of the range, as all the elements of the range
+     are updated by the same factor
 
      If i and j are boundaries for the range, the only change we see is between (i-1, i)
      and (j, j+1)

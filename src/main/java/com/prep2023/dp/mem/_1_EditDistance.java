@@ -1,4 +1,4 @@
-package com.prep2023.dp.mem_mcm;
+package com.prep2023.dp.mem;
 
 /**
  * Author: Bhupendra Shekhawat
@@ -17,7 +17,8 @@ public class _1_EditDistance {
         // j -> points to last char of word2
 
         //1 Insertion :
-        // For insertion I will add character in word1 which is same as last character of word2 which will cause a match leading to removal of last char in both strings ->  i, j-1
+        // For insertion I will add character in word1 which is same as last character of word2
+        // which will cause a match leading to removal of last char in both strings ->  i, j-1
 
         //2 Deletion
         // When no match, delete the character in  word1
