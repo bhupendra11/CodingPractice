@@ -22,7 +22,7 @@ class Trie {
         TrieNode curNode = head; 
         
         for(char c : word.toCharArray()){
-            int index = c -'a';
+            int index = c - 'a';
             if(curNode.children[index] == null){
                 curNode.children[index] = new TrieNode(c);
             }
@@ -58,7 +58,7 @@ class Trie {
         return true;
     }
 
-    class TrieNode{
+    static class TrieNode{
         boolean isTerminal;
         char ch;
         TrieNode[] children;
