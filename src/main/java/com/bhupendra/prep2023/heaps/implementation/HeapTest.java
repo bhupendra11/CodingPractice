@@ -1,4 +1,5 @@
-package com.codingpractice.heapsAndMaps;
+package com.bhupendra.prep2023.heaps.implementation;
+
 public class HeapTest {
 
 	public static void main(String args[]) {

@@ -1,9 +1,8 @@
-package com.codingpractice.heapsAndMaps;
+package com.bhupendra.prep2023.heaps.implementation;
 import java.util.Arrays;
-
 /**
  * 
- * @author I342303 A Binary Heap is a Binary Tree with following properties. 1)
+ * @author  A Binary Heap is a Binary Tree with following properties. 1)
  *         It�s a complete tree (All levels are completely filled except
  *         possibly the last level and the last level has all keys as left as
  *         possible). This property of Binary Heap makes them suitable to be
